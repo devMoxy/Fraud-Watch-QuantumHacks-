@@ -4,6 +4,8 @@ import com.fraudwatch.model.Transaction;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -23,8 +25,11 @@ import java.util.List;
 @Component
 public class CsvTransactionParser {
 
-    public List<Transaction> parse(InputStream inputStream) throws IOException {
+    private static final Logger log = LoggerFactory.getLogger(CsvTransactionParser.class);
+
+    public ParseResult parse(InputStream inputStream) throws IOException {
         List<Transaction> transactions = new ArrayList<>();
+        int skippedCount = 0;
         try (Reader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
              CSVParser parser = CSVFormat.DEFAULT.builder()
                      .setHeader()
@@ -34,18 +39,53 @@ public class CsvTransactionParser {
                      .parse(reader)) {
 
             for (CSVRecord record : parser) {
-                Transaction t = new Transaction(
-                        record.get("accountId"),
-                        new BigDecimal(record.get("amount")),
-                        record.get("currency"),
-                        record.get("merchant"),
-                        record.get("category"),
-                        record.get("location"),
-                        Instant.parse(record.get("timestamp"))
-                );
-                transactions.add(t);
+                try {
+                    transactions.add(parseRow(record));
+                } catch (Exception e) {
+                    skippedCount++;
+                    log.warn("Skipping CSV row {}: {}", record.getRecordNumber(), e.getMessage());
+                }
             }
         }
-        return transactions;
+        return new ParseResult(transactions, skippedCount);
+    }
+
+    private Transaction parseRow(CSVRecord record) {
+        String accountId = record.get("accountId");
+        if (accountId == null || accountId.isBlank()) {
+            throw new IllegalArgumentException("accountId is blank");
+        }
+        BigDecimal amount = new BigDecimal(record.get("amount"));
+        if (amount.signum() <= 0) {
+            throw new IllegalArgumentException("amount must be positive, was " + amount);
+        }
+        return new Transaction(
+                accountId,
+                amount,
+                record.get("currency"),
+                record.get("merchant"),
+                record.get("category"),
+                record.get("location"),
+                Instant.parse(record.get("timestamp"))
+        );
+    }
+
+    /** Parsed transactions plus how many rows were rejected as invalid. */
+    public static class ParseResult {
+        private final List<Transaction> transactions;
+        private final int skippedCount;
+
+        public ParseResult(List<Transaction> transactions, int skippedCount) {
+            this.transactions = transactions;
+            this.skippedCount = skippedCount;
+        }
+
+        public List<Transaction> getTransactions() {
+            return transactions;
+        }
+
+        public int getSkippedCount() {
+            return skippedCount;
+        }
     }
 }

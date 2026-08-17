@@ -1,12 +1,10 @@
 package com.fraudwatch.controller;
 
-import com.fraudwatch.dto.TransactionEvent;
 import com.fraudwatch.service.TransactionIngestionService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayInputStream;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -20,9 +18,13 @@ public class TransactionController {
         this.ingestionService = ingestionService;
     }
 
-    /** Loads a CSV instantly (no delay) - useful for seeding history before a replay demo. */
+    /**
+     * Loads a CSV instantly (no delay) - useful for seeding history before a replay demo.
+     * Invalid rows (zero/negative amount, blank accountId) are skipped rather than failing
+     * the whole upload; the response reports how many rows were skipped.
+     */
     @PostMapping("/ingest")
-    public List<TransactionEvent> ingest(@RequestParam("file") MultipartFile file) throws Exception {
+    public TransactionIngestionService.IngestResult ingest(@RequestParam("file") MultipartFile file) throws Exception {
         return ingestionService.ingestBulk(file.getInputStream());
     }
 
@@ -41,8 +43,12 @@ public class TransactionController {
         return Map.of("started", true);
     }
 
+    /** "lastReplaySkippedCount" reflects the most recently completed (or in-progress) replay. */
     @GetMapping("/replay/status")
     public Map<String, Object> replayStatus() {
-        return Map.of("inProgress", ingestionService.isReplayInProgress());
+        return Map.of(
+                "inProgress", ingestionService.isReplayInProgress(),
+                "lastReplaySkippedCount", ingestionService.getLastReplaySkippedCount()
+        );
     }
 }
