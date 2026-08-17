@@ -5,6 +5,7 @@ const REASON_LABELS = {
   LARGE_AMOUNT_DEVIATION: "Large deviation",
   HIGH_VELOCITY: "High velocity",
   NEW_LOCATION: "New location",
+  MERCHANT_CATEGORY_ANOMALY: "New category",
 };
 
 export default function RiskBreakdown({ flagsByReason }) {
