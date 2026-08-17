@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: fraudwatch
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+fraudwatch:
+  detection:
+    z-score-threshold: 3.0        # flag if |z-score| exceeds this
+    rolling-window-size: 20        # number of prior transactions per account used for baseline
+    large-amount-multiplier: 5.0   # flag if amount > multiplier * rolling mean
+    velocity-window-seconds: 60    # flag if too many txns for an account within this window
+    velocity-max-count: 5
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:h2:mem:fraudwatch;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+---
+spring:
+  config:
+    activate:
+      on-profile: postgres
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:fraudwatch}
+    username: ${DB_USER:fraudwatch}
+    password: ${DB_PASSWORD:fraudwatch}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
