@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class TransactionIngestionService {
@@ -23,6 +24,7 @@ public class TransactionIngestionService {
     private final TransactionWebSocketHandler webSocketHandler;
 
     private final AtomicBoolean replayInProgress = new AtomicBoolean(false);
+    private final AtomicInteger lastReplaySkippedCount = new AtomicInteger(0);
 
     public TransactionIngestionService(CsvTransactionParser csvParser,
                                         TransactionRepository transactionRepository,
@@ -35,13 +37,13 @@ public class TransactionIngestionService {
     }
 
     /** Bulk-loads a CSV instantly, no delay, no broadcast. Good for seeding baseline history. */
-    public List<TransactionEvent> ingestBulk(InputStream csvStream) throws Exception {
-        List<Transaction> parsed = csvParser.parse(csvStream);
+    public IngestResult ingestBulk(InputStream csvStream) throws Exception {
+        CsvTransactionParser.ParseResult parsed = csvParser.parse(csvStream);
         List<TransactionEvent> results = new ArrayList<>();
-        for (Transaction t : parsed) {
+        for (Transaction t : parsed.getTransactions()) {
             results.add(processOne(t));
         }
-        return results;
+        return new IngestResult(results, parsed.getSkippedCount());
     }
 
     /**
@@ -55,8 +57,9 @@ public class TransactionIngestionService {
             return; // a replay is already running
         }
         try {
-            List<Transaction> parsed = csvParser.parse(csvStream);
-            for (Transaction t : parsed) {
+            CsvTransactionParser.ParseResult parsed = csvParser.parse(csvStream);
+            lastReplaySkippedCount.set(parsed.getSkippedCount());
+            for (Transaction t : parsed.getTransactions()) {
                 TransactionEvent event = processOne(t);
                 webSocketHandler.broadcast(event);
                 if (delayMillis > 0) {
@@ -76,9 +79,33 @@ public class TransactionIngestionService {
         return replayInProgress.get();
     }
 
+    /** Number of rows skipped by the most recently completed (or in-progress) replay. */
+    public int getLastReplaySkippedCount() {
+        return lastReplaySkippedCount.get();
+    }
+
     private TransactionEvent processOne(Transaction t) {
         Transaction saved = transactionRepository.save(t);
         Optional<AnomalyFlag> flag = anomalyDetectionService.evaluate(saved);
         return TransactionEvent.of(saved, flag.orElse(null));
+    }
+
+    /** Result of a bulk ingest: the processed events plus how many rows were skipped as invalid. */
+    public static class IngestResult {
+        private final List<TransactionEvent> transactions;
+        private final int skippedCount;
+
+        public IngestResult(List<TransactionEvent> transactions, int skippedCount) {
+            this.transactions = transactions;
+            this.skippedCount = skippedCount;
+        }
+
+        public List<TransactionEvent> getTransactions() {
+            return transactions;
+        }
+
+        public int getSkippedCount() {
+            return skippedCount;
+        }
     }
 }
