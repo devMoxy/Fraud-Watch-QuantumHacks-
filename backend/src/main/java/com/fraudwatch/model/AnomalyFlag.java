@@ -68,6 +68,7 @@ public class AnomalyFlag {
         Z_SCORE_OUTLIER,
         LARGE_AMOUNT_DEVIATION,
         HIGH_VELOCITY,
-        NEW_LOCATION
+        NEW_LOCATION,
+        MERCHANT_CATEGORY_ANOMALY
     }
 }

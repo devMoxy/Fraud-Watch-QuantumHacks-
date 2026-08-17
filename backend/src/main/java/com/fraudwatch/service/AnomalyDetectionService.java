@@ -25,6 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *   3. Large deviation - amount is a large multiple of the rolling mean (catches early accounts
  *                         with too few points for a stable stddev)
  *   4. New location   - first time this account has transacted from this location
+ *   5. New category   - first time this account has transacted in this merchant category
  */
 @Service
 public class AnomalyDetectionService {
@@ -40,6 +41,9 @@ public class AnomalyDetectionService {
 
     // per-account set of previously seen locations (in-memory cache, rebuilt from DB lazily)
     private final ConcurrentHashMap<String, Set<String>> knownLocationsByAccount = new ConcurrentHashMap<>();
+
+    // per-account set of previously seen merchant categories (in-memory cache, rebuilt from DB lazily)
+    private final ConcurrentHashMap<String, Set<String>> knownCategoriesByAccount = new ConcurrentHashMap<>();
 
     public AnomalyDetectionService(
             TransactionRepository transactionRepository,
@@ -114,6 +118,16 @@ public class AnomalyDetectionService {
                 .computeIfAbsent(txn.getAccountId(), k -> ConcurrentHashMap.newKeySet())
                 .add(txn.getLocation());
 
+        Optional<AnomalyFlag> categoryFlag = checkNewCategory(txn, history);
+        if (categoryFlag.isPresent()) {
+            return persist(categoryFlag.get());
+        }
+
+        // still record this account/category combo as seen even if not flagged
+        knownCategoriesByAccount
+                .computeIfAbsent(txn.getAccountId(), k -> ConcurrentHashMap.newKeySet())
+                .add(txn.getCategory());
+
         return Optional.empty();
     }
 
@@ -146,6 +160,24 @@ public class AnomalyDetectionService {
             return Optional.of(new AnomalyFlag(txn, AnomalyFlag.AnomalyReason.NEW_LOCATION, 45,
                     String.format("First transaction for account %s from location %s",
                             txn.getAccountId(), txn.getLocation()),
+                    Instant.now()));
+        }
+        return Optional.empty();
+    }
+
+    private Optional<AnomalyFlag> checkNewCategory(Transaction txn, List<Transaction> history) {
+        if (history.size() < 5) {
+            return Optional.empty(); // not enough history to know what's "normal" yet
+        }
+        Set<String> known = knownCategoriesByAccount.computeIfAbsent(txn.getAccountId(), k -> {
+            Set<String> set = ConcurrentHashMap.newKeySet();
+            history.forEach(t -> set.add(t.getCategory()));
+            return set;
+        });
+        if (!known.contains(txn.getCategory())) {
+            return Optional.of(new AnomalyFlag(txn, AnomalyFlag.AnomalyReason.MERCHANT_CATEGORY_ANOMALY, 40,
+                    String.format("First transaction for account %s in category %s",
+                            txn.getAccountId(), txn.getCategory()),
                     Instant.now()));
         }
         return Optional.empty();
