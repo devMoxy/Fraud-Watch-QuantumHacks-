@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -52,14 +53,24 @@ public class DashboardController {
         long totalFlags = anomalyFlagRepository.count();
         double flagRate = totalTxns == 0 ? 0 : (double) totalFlags / totalTxns * 100;
 
-        Map<String, Long> byReason = anomalyFlagRepository.findAll().stream()
+        List<AnomalyFlag> flags = anomalyFlagRepository.findAll();
+
+        Map<String, Long> byReason = flags.stream()
                 .collect(Collectors.groupingBy(f -> f.getReason().name(), Collectors.counting()));
 
-        return Map.of(
-                "totalTransactions", totalTxns,
-                "totalFlags", totalFlags,
-                "flagRatePercent", Math.round(flagRate * 100.0) / 100.0,
-                "flagsByReason", byReason
-        );
+        String topFlaggedAccount = flags.stream()
+                .collect(Collectors.groupingBy(f -> f.getTransaction().getAccountId(), Collectors.counting()))
+                .entrySet().stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey)
+                .orElse(null);
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("totalTransactions", totalTxns);
+        result.put("totalFlags", totalFlags);
+        result.put("flagRatePercent", Math.round(flagRate * 100.0) / 100.0);
+        result.put("flagsByReason", byReason);
+        result.put("topFlaggedAccount", topFlaggedAccount);
+        return result;
     }
 }
