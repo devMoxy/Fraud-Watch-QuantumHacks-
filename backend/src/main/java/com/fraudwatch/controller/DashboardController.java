@@ -5,7 +5,9 @@ import com.fraudwatch.model.AnomalyFlag;
 import com.fraudwatch.model.Transaction;
 import com.fraudwatch.repository.AnomalyFlagRepository;
 import com.fraudwatch.repository.TransactionRepository;
+import com.fraudwatch.service.AnomalyDetectionService;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,11 +24,14 @@ public class DashboardController {
 
     private final TransactionRepository transactionRepository;
     private final AnomalyFlagRepository anomalyFlagRepository;
+    private final AnomalyDetectionService anomalyDetectionService;
 
     public DashboardController(TransactionRepository transactionRepository,
-                                AnomalyFlagRepository anomalyFlagRepository) {
+                                AnomalyFlagRepository anomalyFlagRepository,
+                                AnomalyDetectionService anomalyDetectionService) {
         this.transactionRepository = transactionRepository;
         this.anomalyFlagRepository = anomalyFlagRepository;
+        this.anomalyDetectionService = anomalyDetectionService;
     }
 
     @GetMapping("/recent")
@@ -72,5 +77,13 @@ public class DashboardController {
         result.put("flagsByReason", byReason);
         result.put("topFlaggedAccount", topFlaggedAccount);
         return result;
+    }
+
+    @DeleteMapping("/reset")
+    public Map<String, Object> reset() {
+        anomalyFlagRepository.deleteAll();
+        transactionRepository.deleteAll();
+        anomalyDetectionService.resetCaches();
+        return Map.of("reset", true);
     }
 }

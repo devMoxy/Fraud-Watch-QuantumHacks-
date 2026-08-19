@@ -183,6 +183,16 @@ public class AnomalyDetectionService {
         return Optional.empty();
     }
 
+    /**
+     * Clears the in-memory known-location/known-category caches. Call this after wiping the
+     * underlying transaction/flag tables (e.g. a demo reset) so stale per-account history
+     * doesn't linger and suppress new-location/new-category detection.
+     */
+    public void resetCaches() {
+        knownLocationsByAccount.clear();
+        knownCategoriesByAccount.clear();
+    }
+
     private Optional<AnomalyFlag> persist(AnomalyFlag flag) {
         return Optional.of(anomalyFlagRepository.save(flag));
     }
