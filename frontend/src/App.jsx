@@ -105,6 +105,9 @@ export default function App() {
             <p className="text-[11px] text-ash font-mono tracking-wide">
               real-time transaction anomaly monitor
             </p>
+            <p className="text-[10px] text-ash/70 font-mono tracking-wide">
+              Made by Enoch and Yusuf
+            </p>
           </div>
         </div>
         <ControlPanel onIngest={handleIngest} onReplay={handleReplay} replaying={replaying} />
