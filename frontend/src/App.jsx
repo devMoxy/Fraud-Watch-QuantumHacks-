@@ -4,6 +4,7 @@ import {
   fetchFlaggedTransactions,
   fetchStats,
   uploadCsv,
+  resetDashboard,
   connectTransactionStream,
 } from "./api";
 import StatStrip from "./components/StatStrip";
@@ -91,6 +92,12 @@ export default function App() {
     }, 1000);
   };
 
+  const handleReset = async () => {
+    await resetDashboard();
+    setEvents([]);
+    await refreshAll();
+  };
+
   return (
     <div className="min-h-screen bg-ink text-mist font-body">
       <header className="border-b border-line px-6 py-4 flex items-center justify-between">
@@ -110,7 +117,7 @@ export default function App() {
             </p>
           </div>
         </div>
-        <ControlPanel onIngest={handleIngest} onReplay={handleReplay} replaying={replaying} />
+        <ControlPanel onIngest={handleIngest} onReplay={handleReplay} onReset={handleReset} replaying={replaying} />
       </header>
 
       <main className="max-w-[1400px] mx-auto px-6 py-6 flex flex-col gap-6">

@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 
-export default function ControlPanel({ onIngest, onReplay, replaying }) {
+export default function ControlPanel({ onIngest, onReplay, onReset, replaying }) {
   const fileInputRef = useRef(null);
   const [fileName, setFileName] = useState("");
+  const [resetting, setResetting] = useState(false);
   const [loadingDemo, setLoadingDemo] = useState(false);
 
   const handleFileChange = (e) => {
@@ -11,6 +12,18 @@ export default function ControlPanel({ onIngest, onReplay, replaying }) {
   };
 
   const getFile = () => fileInputRef.current?.files?.[0];
+
+  const handleReset = async () => {
+    if (!window.confirm("This will permanently delete all stored transactions and anomaly flags. Continue?")) {
+      return;
+    }
+    setResetting(true);
+    try {
+      await onReset();
+    } finally {
+      setResetting(false);
+    }
+  };
 
   const handleLoadDemo = async () => {
     setLoadingDemo(true);
@@ -50,6 +63,13 @@ export default function ControlPanel({ onIngest, onReplay, replaying }) {
         className="text-xs px-3 py-2 rounded-md bg-pulse text-ink font-semibold hover:bg-pulse/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
       >
         {replaying ? "Replaying…" : "Replay transactions"}
+      </button>
+      <button
+        onClick={handleReset}
+        disabled={resetting || replaying}
+        className="text-xs px-3 py-2 rounded-md border border-alert/50 text-alert hover:bg-alert/10 hover:border-alert transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        {resetting ? "Resetting…" : "Reset"}
       </button>
     </div>
   );

@@ -19,6 +19,12 @@ export async function fetchStats() {
   return res.json();
 }
 
+export async function resetDashboard() {
+  const res = await fetch(`${API_BASE}/api/dashboard/reset`, { method: "DELETE" });
+  if (!res.ok) throw new Error("Reset failed");
+  return res.json();
+}
+
 export async function uploadCsv(file, { replay = false, delayMs = 400 } = {}) {
   const formData = new FormData();
   formData.append("file", file);
