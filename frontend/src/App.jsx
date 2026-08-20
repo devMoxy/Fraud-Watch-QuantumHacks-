@@ -41,7 +41,12 @@ export default function App() {
   useEffect(() => {
     refreshAll();
 
+    // StrictMode mounts/cleans up/remounts this effect in dev, and socket.close() doesn't
+    // tear the connection down synchronously. socketRef doubles as a guard here: only the
+    // socket currently held in the ref is treated as live, so a stale socket from a prior
+    // effect run can't apply duplicate updates even if the server briefly still has it open.
     const socket = connectTransactionStream((event) => {
+      if (socketRef.current !== socket) return;
       setEvents((prev) => [event, ...prev].slice(0, MAX_TICKER_ROWS));
       if (event.flagged) {
         setFlags((prev) => [event, ...prev].slice(0, 100));
@@ -64,12 +69,17 @@ export default function App() {
         };
       });
     });
-    socket.onopen = () => setConnected(true);
-    socket.onclose = () => setConnected(false);
-    socket.onerror = () => setConnected(false);
+    socket.onopen = () => { if (socketRef.current === socket) setConnected(true); };
+    socket.onclose = () => { if (socketRef.current === socket) setConnected(false); };
+    socket.onerror = () => { if (socketRef.current === socket) setConnected(false); };
     socketRef.current = socket;
 
-    return () => socket.close();
+    return () => {
+      if (socketRef.current === socket) {
+        socketRef.current = null;
+      }
+      socket.close();
+    };
   }, [refreshAll]);
 
   const handleIngest = async (file) => {

@@ -33,7 +33,7 @@ t = start
 
 for account_id, profile in ACCOUNTS.items():
     account_time = start + timedelta(minutes=random.randint(0, 120))
-    for i in range(60):
+    for i in range(20):
         amount = max(1.0, random.gauss(profile["mean"], profile["stddev"]))
         location = random.choice(profile["home_locations"])
         rows.append({
