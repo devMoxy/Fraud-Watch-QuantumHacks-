@@ -1,312 +1,112 @@
 accountId,amount,currency,merchant,category,location,timestamp
-acct-1003,13.02,USD,Delta Airlines,Fuel,Berlin,2026-08-14T09:43:00Z
-acct-1005,31.45,USD,Steam,Fuel,Toronto,2026-08-14T09:49:00Z
-acct-1004,255.33,USD,Netflix,Electronics,Singapore,2026-08-14T09:52:00Z
+acct-1005,58.48,USD,Airbnb,Dining,Toronto,2026-08-14T09:22:00Z
+acct-1002,151.70,USD,Zara,Electronics,Boston,2026-08-14T09:33:00Z
+acct-1003,22.79,USD,Netflix,Groceries,Berlin,2026-08-14T10:20:00Z
 acct-1001,63.88,USD,Starbucks,Fuel,London,2026-08-14T10:21:00Z
-acct-1002,116.98,USD,Starbucks,Transport,Boston,2026-08-14T10:59:00Z
-acct-1005,68.56,USD,Delta Airlines,Electronics,Toronto,2026-08-14T11:50:00Z
-acct-1003,7.51,USD,Apple,Retail,Berlin,2026-08-14T12:37:00Z
-acct-1002,164.55,USD,Airbnb,Transport,New York,2026-08-14T12:55:00Z
-acct-1004,377.40,USD,Uber,Electronics,Hong Kong,2026-08-14T13:04:00Z
-acct-1003,17.30,USD,Shell,Retail,Berlin,2026-08-14T13:13:00Z
-acct-1005,78.84,USD,Delta Airlines,Dining,Toronto,2026-08-14T13:16:00Z
+acct-1005,42.09,USD,Zara,Groceries,Toronto,2026-08-14T10:45:00Z
+acct-1004,293.96,USD,Starbucks,Transport,Hong Kong,2026-08-14T10:59:00Z
+acct-1002,158.14,USD,Netflix,Dining,Boston,2026-08-14T12:17:00Z
+acct-1005,87.47,USD,Starbucks,Travel,Toronto,2026-08-14T12:37:00Z
+acct-1003,21.08,USD,Uber,Travel,Berlin,2026-08-14T12:46:00Z
+acct-1004,389.11,USD,Airbnb,Transport,Singapore,2026-08-14T12:55:00Z
+acct-1002,106.93,USD,Tesco,Fuel,New York,2026-08-14T13:07:00Z
 acct-1001,60.89,USD,Airbnb,Entertainment,London,2026-08-14T13:44:00Z
+acct-1003,7.56,USD,Starbucks,Travel,Berlin,2026-08-14T13:55:00Z
 acct-1001,41.79,USD,Starbucks,Dining,London,2026-08-14T14:21:00Z
-acct-1003,16.62,USD,Netflix,Dining,Berlin,2026-08-14T14:34:00Z
+acct-1005,31.53,USD,Starbucks,Dining,Toronto,2026-08-14T14:21:00Z
+acct-1005,49.20,USD,Tesco,Transport,Toronto,2026-08-14T14:42:00Z
 acct-1005,980.00,USD,Best Buy,Electronics,Toronto,2026-08-14T15:00:00Z
-acct-1002,99.77,USD,Amazon,Travel,New York,2026-08-14T15:07:00Z
+acct-1004,259.54,USD,Amazon,Travel,Singapore,2026-08-14T15:07:00Z
+acct-1002,119.22,USD,Airbnb,Electronics,New York,2026-08-14T16:02:00Z
+acct-1005,42.97,USD,Airbnb,Entertainment,Toronto,2026-08-14T16:26:00Z
 acct-1001,42.95,USD,Best Buy,Dining,London,2026-08-14T16:45:00Z
-acct-1003,13.71,USD,Uber,Electronics,Berlin,2026-08-14T16:45:00Z
-acct-1004,301.08,USD,Netflix,Transport,Singapore,2026-08-14T16:47:00Z
-acct-1005,63.93,USD,Tesco,Subscription,Toronto,2026-08-14T17:09:00Z
-acct-1002,165.82,USD,Tesco,Entertainment,New York,2026-08-14T18:01:00Z
-acct-1003,31.99,USD,Delta Airlines,Retail,Berlin,2026-08-14T18:04:00Z
-acct-1004,283.63,USD,Apple,Entertainment,Singapore,2026-08-14T18:24:00Z
-acct-1002,104.02,USD,Tesco,Dining,Boston,2026-08-14T19:10:00Z
-acct-1005,83.46,USD,Apple,Transport,Toronto,2026-08-14T19:43:00Z
+acct-1003,16.87,USD,Starbucks,Groceries,Berlin,2026-08-14T17:36:00Z
+acct-1004,391.64,USD,Tesco,Entertainment,Singapore,2026-08-14T18:01:00Z
+acct-1005,69.19,USD,Shell,Transport,Toronto,2026-08-14T18:05:00Z
+acct-1003,15.95,USD,Delta Airlines,Retail,Berlin,2026-08-14T18:15:00Z
+acct-1005,56.31,USD,Steam,Electronics,Toronto,2026-08-14T18:29:00Z
+acct-1002,147.10,USD,Best Buy,Transport,Boston,2026-08-14T18:49:00Z
+acct-1004,268.04,USD,Tesco,Dining,Hong Kong,2026-08-14T19:10:00Z
 acct-1001,33.93,USD,Delta Airlines,Transport,London,2026-08-14T20:03:00Z
-acct-1005,43.33,USD,Delta Airlines,Groceries,Toronto,2026-08-14T20:46:00Z
-acct-1002,119.41,USD,Shell,Travel,Boston,2026-08-14T20:59:00Z
-acct-1003,1.00,USD,Starbucks,Groceries,Berlin,2026-08-14T21:30:00Z
-acct-1004,387.61,USD,Apple,Retail,Hong Kong,2026-08-14T22:10:00Z
-acct-1004,293.45,USD,Steam,Travel,Hong Kong,2026-08-14T23:13:00Z
+acct-1005,57.67,USD,Apple,Dining,Toronto,2026-08-14T20:12:00Z
+acct-1004,298.82,USD,Shell,Travel,Hong Kong,2026-08-14T20:59:00Z
+acct-1003,13.71,USD,Amazon,Electronics,Berlin,2026-08-14T21:22:00Z
+acct-1002,131.43,USD,Airbnb,Groceries,New York,2026-08-14T21:25:00Z
+acct-1005,42.80,USD,Zara,Electronics,Toronto,2026-08-14T21:32:00Z
+acct-1005,24.03,USD,Netflix,Electronics,Toronto,2026-08-14T21:47:00Z
+acct-1005,55.47,USD,Steam,Subscription,Toronto,2026-08-14T22:19:00Z
 acct-1001,29.78,USD,Shell,Electronics,London,2026-08-14T23:45:00Z
-acct-1005,66.74,USD,Amazon,Subscription,Toronto,2026-08-14T23:50:00Z
-acct-1002,95.47,USD,Airbnb,Entertainment,New York,2026-08-15T00:47:00Z
-acct-1003,11.55,USD,Amazon,Dining,Berlin,2026-08-15T01:04:00Z
-acct-1005,87.76,USD,Steam,Dining,Toronto,2026-08-15T01:07:00Z
+acct-1002,157.47,USD,Tesco,Transport,Boston,2026-08-15T00:34:00Z
+acct-1003,11.53,USD,Starbucks,Dining,Berlin,2026-08-15T00:43:00Z
+acct-1004,250.93,USD,Airbnb,Entertainment,Singapore,2026-08-15T00:47:00Z
+acct-1005,78.43,USD,Best Buy,Transport,Toronto,2026-08-15T01:23:00Z
 acct-1001,43.18,USD,Tesco,Groceries,Manchester,2026-08-15T01:27:00Z
-acct-1005,72.22,USD,Starbucks,Subscription,Toronto,2026-08-15T01:39:00Z
-acct-1004,281.75,USD,Best Buy,Fuel,Hong Kong,2026-08-15T02:08:00Z
-acct-1003,25.93,USD,Shell,Travel,Berlin,2026-08-15T02:10:00Z
-acct-1002,113.17,USD,Shell,Transport,New York,2026-08-15T02:18:00Z
-acct-1002,158.02,USD,Uber,Transport,New York,2026-08-15T03:02:00Z
+acct-1004,286.34,USD,Shell,Transport,Singapore,2026-08-15T02:18:00Z
+acct-1002,86.87,USD,Delta Airlines,Retail,New York,2026-08-15T02:40:00Z
+acct-1004,376.03,USD,Uber,Transport,Singapore,2026-08-15T03:02:00Z
+acct-1003,33.47,USD,Shell,Electronics,Berlin,2026-08-15T03:15:00Z
 acct-1001,55.29,USD,Netflix,Subscription,London,2026-08-15T03:19:00Z
-acct-1004,306.96,USD,Zara,Travel,Hong Kong,2026-08-15T03:36:00Z
-acct-1004,383.22,USD,Zara,Fuel,Singapore,2026-08-15T04:22:00Z
-acct-1005,37.71,USD,Steam,Retail,Toronto,2026-08-15T05:12:00Z
-acct-1003,10.56,USD,Steam,Dining,Berlin,2026-08-15T05:16:00Z
-acct-1002,88.43,USD,Zara,Subscription,New York,2026-08-15T05:51:00Z
-acct-1004,315.26,USD,Best Buy,Electronics,Singapore,2026-08-15T05:56:00Z
+acct-1003,18.92,USD,Delta Airlines,Entertainment,Berlin,2026-08-15T04:16:00Z
+acct-1005,33.96,USD,Netflix,Electronics,Toronto,2026-08-15T04:28:00Z
+acct-1003,25.97,USD,Airbnb,Entertainment,Berlin,2026-08-15T04:56:00Z
+acct-1004,236.87,USD,Zara,Subscription,Singapore,2026-08-15T05:51:00Z
+acct-1002,136.68,USD,Best Buy,Groceries,New York,2026-08-15T05:59:00Z
 acct-1001,44.59,USD,Best Buy,Groceries,Manchester,2026-08-15T06:08:00Z
-acct-1004,318.23,USD,Delta Airlines,Groceries,Singapore,2026-08-15T06:34:00Z
-acct-1005,67.04,USD,Best Buy,Transport,Toronto,2026-08-15T06:37:00Z
-acct-1002,97.52,USD,Uber,Retail,Boston,2026-08-15T06:58:00Z
-acct-1003,15.74,USD,Steam,Groceries,Berlin,2026-08-15T07:30:00Z
-acct-1002,65.73,USD,Uber,Retail,Boston,2026-08-15T07:36:00Z
-acct-1002,112.04,USD,Shell,Travel,Boston,2026-08-15T07:51:00Z
+acct-1004,255.04,USD,Uber,Retail,Hong Kong,2026-08-15T06:58:00Z
+acct-1004,191.47,USD,Uber,Retail,Hong Kong,2026-08-15T07:36:00Z
+acct-1005,57.05,USD,Airbnb,Electronics,Toronto,2026-08-15T07:41:00Z
+acct-1004,284.08,USD,Shell,Travel,Hong Kong,2026-08-15T07:51:00Z
 acct-1001,49.45,USD,Best Buy,Transport,London,2026-08-15T07:59:00Z
-acct-1004,413.69,USD,Delta Airlines,Transport,Singapore,2026-08-15T09:34:00Z
-acct-1005,51.31,USD,Tesco,Retail,Toronto,2026-08-15T10:16:00Z
-acct-1002,133.75,USD,Best Buy,Retail,Boston,2026-08-15T10:27:00Z
-acct-1003,7.03,USD,Uber,Groceries,Berlin,2026-08-15T11:04:00Z
-acct-1005,95.18,USD,Steam,Subscription,Toronto,2026-08-15T11:04:00Z
-acct-1002,175.34,USD,Best Buy,Retail,New York,2026-08-15T11:10:00Z
-acct-1005,63.29,USD,Uber,Retail,Toronto,2026-08-15T11:23:00Z
+acct-1003,23.52,USD,Shell,Electronics,Berlin,2026-08-15T08:45:00Z
+acct-1002,103.50,USD,Airbnb,Entertainment,Boston,2026-08-15T09:56:00Z
+acct-1004,327.49,USD,Best Buy,Retail,Hong Kong,2026-08-15T10:27:00Z
+acct-1005,70.01,USD,Steam,Transport,Toronto,2026-08-15T10:49:00Z
+acct-1003,20.33,USD,Starbucks,Electronics,Berlin,2026-08-15T11:04:00Z
+acct-1004,410.68,USD,Best Buy,Retail,Singapore,2026-08-15T11:10:00Z
+acct-1003,20.27,USD,Uber,Travel,Berlin,2026-08-15T11:34:00Z
 acct-1001,23.43,USD,Steam,Dining,Manchester,2026-08-15T11:46:00Z
-acct-1004,282.81,USD,Delta Airlines,Dining,Hong Kong,2026-08-15T11:59:00Z
-acct-1005,58.73,USD,Delta Airlines,Travel,Toronto,2026-08-15T12:10:00Z
-acct-1003,26.83,USD,Apple,Dining,Berlin,2026-08-15T13:47:00Z
-acct-1004,240.24,USD,Apple,Dining,Singapore,2026-08-15T14:10:00Z
-acct-1003,21.11,USD,Tesco,Transport,Berlin,2026-08-15T14:21:00Z
-acct-1002,148.30,USD,Steam,Entertainment,Boston,2026-08-15T14:58:00Z
+acct-1002,129.16,USD,Best Buy,Entertainment,New York,2026-08-15T12:46:00Z
+acct-1005,59.46,USD,Starbucks,Electronics,Toronto,2026-08-15T12:47:00Z
+acct-1002,147.55,USD,Delta Airlines,Retail,Boston,2026-08-15T13:01:00Z
+acct-1003,20.45,USD,Zara,Entertainment,Berlin,2026-08-15T13:02:00Z
+acct-1002,175.61,USD,Starbucks,Retail,Boston,2026-08-15T13:44:00Z
+acct-1004,356.61,USD,Steam,Entertainment,Hong Kong,2026-08-15T14:58:00Z
+acct-1002,93.45,USD,Tesco,Travel,New York,2026-08-15T15:00:00Z
 acct-1001,22.42,USD,Amazon,Dining,London,2026-08-15T15:01:00Z
-acct-1005,35.59,USD,Best Buy,Groceries,Toronto,2026-08-15T15:44:00Z
-acct-1002,112.07,USD,Amazon,Subscription,Boston,2026-08-15T15:50:00Z
-acct-1002,123.74,USD,Airbnb,Groceries,New York,2026-08-15T16:58:00Z
-acct-1004,176.77,USD,Uber,Electronics,Singapore,2026-08-15T16:58:00Z
-acct-1005,11.78,USD,Zara,Entertainment,Toronto,2026-08-15T17:54:00Z
-acct-1003,14.19,USD,Netflix,Entertainment,Berlin,2026-08-15T18:13:00Z
+acct-1004,284.14,USD,Amazon,Subscription,Hong Kong,2026-08-15T15:50:00Z
+acct-1003,19.09,USD,Starbucks,Retail,Berlin,2026-08-15T16:06:00Z
+acct-1005,59.83,USD,Delta Airlines,Travel,Toronto,2026-08-15T16:23:00Z
+acct-1004,307.49,USD,Airbnb,Groceries,Singapore,2026-08-15T16:58:00Z
+acct-1005,49.22,USD,Airbnb,Groceries,Toronto,2026-08-15T18:31:00Z
 acct-1001,43.50,USD,Tesco,Electronics,London,2026-08-15T18:33:00Z
-acct-1004,293.61,USD,Amazon,Transport,Hong Kong,2026-08-15T18:40:00Z
-acct-1002,131.72,USD,Steam,Fuel,Boston,2026-08-15T18:43:00Z
-acct-1005,58.84,USD,Airbnb,Retail,Toronto,2026-08-15T19:26:00Z
-acct-1005,98.77,USD,Airbnb,Groceries,Toronto,2026-08-15T19:56:00Z
-acct-1002,58.83,USD,Shell,Electronics,New York,2026-08-15T19:58:00Z
+acct-1002,166.01,USD,Shell,Travel,New York,2026-08-15T18:43:00Z
+acct-1004,323.43,USD,Steam,Fuel,Hong Kong,2026-08-15T18:43:00Z
+acct-1003,15.45,USD,Zara,Subscription,Berlin,2026-08-15T18:49:00Z
+acct-1003,28.66,USD,Amazon,Entertainment,Berlin,2026-08-15T19:18:00Z
+acct-1003,22.82,USD,Tesco,Groceries,Berlin,2026-08-15T19:53:00Z
+acct-1004,177.65,USD,Shell,Electronics,Singapore,2026-08-15T19:58:00Z
+acct-1005,38.64,USD,Tesco,Dining,Toronto,2026-08-15T19:58:00Z
 acct-1001,50.93,USD,Airbnb,Subscription,Manchester,2026-08-15T19:59:00Z
-acct-1003,6.74,USD,Tesco,Entertainment,Berlin,2026-08-15T20:17:00Z
-acct-1002,149.28,USD,Airbnb,Dining,Boston,2026-08-15T20:19:00Z
 acct-1001,37.95,USD,Zara,Groceries,Manchester,2026-08-15T20:55:00Z
-acct-1002,181.59,USD,Zara,Groceries,New York,2026-08-15T21:42:00Z
-acct-1004,276.03,USD,Shell,Travel,Hong Kong,2026-08-15T22:00:00Z
-acct-1005,59.66,USD,Tesco,Groceries,Toronto,2026-08-15T22:16:00Z
-acct-1003,11.55,USD,Tesco,Electronics,Berlin,2026-08-15T23:17:00Z
-acct-1002,161.20,USD,Starbucks,Travel,New York,2026-08-15T23:34:00Z
+acct-1002,141.37,USD,Uber,Entertainment,New York,2026-08-15T21:18:00Z
+acct-1003,25.26,USD,Steam,Retail,Berlin,2026-08-15T23:00:00Z
 acct-1001,52.49,USD,Best Buy,Dining,London,2026-08-15T23:45:00Z
-acct-1005,54.27,USD,Steam,Entertainment,Toronto,2026-08-15T23:53:00Z
-acct-1004,376.10,USD,Netflix,Subscription,Hong Kong,2026-08-16T00:32:00Z
 acct-1001,33.43,USD,Airbnb,Subscription,London,2026-08-16T00:41:00Z
-acct-1003,33.08,USD,Zara,Fuel,Berlin,2026-08-16T01:04:00Z
-acct-1002,77.30,USD,Starbucks,Dining,Boston,2026-08-16T01:18:00Z
-acct-1002,103.80,USD,Tesco,Transport,Boston,2026-08-16T01:39:00Z
-acct-1004,304.72,USD,Starbucks,Dining,Hong Kong,2026-08-16T03:08:00Z
-acct-1003,24.35,USD,Steam,Entertainment,Berlin,2026-08-16T03:10:00Z
-acct-1005,55.36,USD,Apple,Entertainment,Toronto,2026-08-16T03:10:00Z
-acct-1002,94.46,USD,Airbnb,Entertainment,Boston,2026-08-16T03:23:00Z
+acct-1002,59.26,USD,Zara,Transport,New York,2026-08-16T01:16:00Z
+acct-1003,13.79,USD,Apple,Entertainment,Berlin,2026-08-16T01:53:00Z
+acct-1002,71.91,USD,Delta Airlines,Entertainment,Boston,2026-08-16T03:13:00Z
 acct-1001,47.80,USD,Starbucks,Retail,London,2026-08-16T04:31:00Z
-acct-1005,33.87,USD,Zara,Groceries,Toronto,2026-08-16T04:40:00Z
-acct-1002,133.78,USD,Shell,Transport,Boston,2026-08-16T05:02:00Z
-acct-1002,114.47,USD,Steam,Electronics,New York,2026-08-16T05:26:00Z
-acct-1004,241.80,USD,Starbucks,Electronics,Hong Kong,2026-08-16T05:49:00Z
-acct-1004,271.79,USD,Apple,Fuel,Hong Kong,2026-08-16T06:15:00Z
-acct-1003,28.69,USD,Delta Airlines,Electronics,Berlin,2026-08-16T06:43:00Z
-acct-1002,116.50,USD,Apple,Dining,New York,2026-08-16T07:09:00Z
+acct-1002,135.51,USD,Amazon,Entertainment,Boston,2026-08-16T05:23:00Z
+acct-1002,134.75,USD,Amazon,Groceries,New York,2026-08-16T06:36:00Z
 acct-1001,40.27,USD,Steam,Subscription,London,2026-08-16T08:12:00Z
-acct-1002,94.21,USD,Zara,Electronics,New York,2026-08-16T08:29:00Z
-acct-1005,67.82,USD,Apple,Travel,Toronto,2026-08-16T08:33:00Z
-acct-1004,361.77,USD,Shell,Entertainment,Singapore,2026-08-16T08:36:00Z
-acct-1002,66.05,USD,Netflix,Electronics,New York,2026-08-16T08:44:00Z
-acct-1002,113.21,USD,Steam,Subscription,Boston,2026-08-16T09:16:00Z
 acct-1001,55.85,USD,Apple,Travel,Manchester,2026-08-16T09:21:00Z
-acct-1005,27.87,USD,Apple,Groceries,Toronto,2026-08-16T09:46:00Z
-acct-1001,43.95,USD,Zara,Electronics,Manchester,2026-08-16T10:12:00Z
-acct-1003,19.25,USD,Tesco,Transport,Berlin,2026-08-16T10:29:00Z
-acct-1005,79.32,USD,Netflix,Transport,Toronto,2026-08-16T11:21:00Z
-acct-1004,286.40,USD,Tesco,Entertainment,Hong Kong,2026-08-16T11:22:00Z
 acct-1001,2400.00,USD,Luxury Watches Co,Retail,London,2026-08-16T12:00:00Z
 acct-1003,89.50,USD,Unknown Merchant,Electronics,Lagos,2026-08-16T12:10:00Z
-acct-1002,147.64,USD,Best Buy,Transport,Boston,2026-08-16T12:20:00Z
-acct-1004,65.29,USD,Airbnb,Retail,Singapore,2026-08-16T12:25:00Z
-acct-1004,57.54,USD,Airbnb,Retail,Singapore,2026-08-16T12:25:05Z
-acct-1004,99.41,USD,Steam,Retail,Singapore,2026-08-16T12:25:10Z
-acct-1004,125.99,USD,Delta Airlines,Retail,Singapore,2026-08-16T12:25:15Z
-acct-1004,118.11,USD,Steam,Retail,Singapore,2026-08-16T12:25:20Z
-acct-1004,114.30,USD,Steam,Retail,Singapore,2026-08-16T12:25:25Z
-acct-1004,82.32,USD,Airbnb,Retail,Singapore,2026-08-16T12:25:30Z
-acct-1004,81.61,USD,Delta Airlines,Retail,Singapore,2026-08-16T12:25:35Z
-acct-1001,56.24,USD,Netflix,Dining,Manchester,2026-08-16T12:56:00Z
-acct-1005,89.19,USD,Tesco,Groceries,Toronto,2026-08-16T13:11:00Z
-acct-1004,324.01,USD,Zara,Fuel,Singapore,2026-08-16T13:33:00Z
-acct-1001,38.46,USD,Tesco,Fuel,London,2026-08-16T13:46:00Z
-acct-1003,13.72,USD,Starbucks,Travel,Berlin,2026-08-16T14:29:00Z
-acct-1002,80.94,USD,Netflix,Electronics,Boston,2026-08-16T15:25:00Z
-acct-1004,409.42,USD,Delta Airlines,Transport,Singapore,2026-08-16T15:32:00Z
-acct-1001,44.61,USD,Airbnb,Electronics,London,2026-08-16T16:41:00Z
-acct-1005,51.24,USD,Tesco,Electronics,Toronto,2026-08-16T16:58:00Z
-acct-1003,13.99,USD,Delta Airlines,Subscription,Berlin,2026-08-16T17:09:00Z
-acct-1004,184.83,USD,Airbnb,Groceries,Hong Kong,2026-08-16T17:13:00Z
-acct-1005,59.34,USD,Best Buy,Retail,Toronto,2026-08-16T17:37:00Z
-acct-1003,15.01,USD,Starbucks,Subscription,Berlin,2026-08-16T18:10:00Z
-acct-1002,115.57,USD,Airbnb,Electronics,Boston,2026-08-16T18:38:00Z
-acct-1001,58.55,USD,Best Buy,Transport,Manchester,2026-08-16T19:28:00Z
-acct-1005,40.70,USD,Airbnb,Groceries,Toronto,2026-08-16T20:22:00Z
-acct-1004,257.41,USD,Netflix,Travel,Hong Kong,2026-08-16T21:06:00Z
-acct-1002,135.01,USD,Steam,Transport,New York,2026-08-16T21:46:00Z
-acct-1003,19.66,USD,Best Buy,Retail,Berlin,2026-08-16T21:49:00Z
-acct-1001,50.72,USD,Airbnb,Groceries,London,2026-08-16T22:04:00Z
-acct-1005,42.07,USD,Zara,Retail,Toronto,2026-08-16T22:22:00Z
-acct-1002,119.18,USD,Starbucks,Electronics,Boston,2026-08-16T23:44:00Z
-acct-1005,83.54,USD,Netflix,Groceries,Toronto,2026-08-16T23:50:00Z
-acct-1003,26.47,USD,Tesco,Dining,Berlin,2026-08-17T00:16:00Z
-acct-1004,379.15,USD,Steam,Groceries,Singapore,2026-08-17T01:04:00Z
-acct-1001,63.74,USD,Tesco,Transport,Manchester,2026-08-17T01:13:00Z
-acct-1004,208.19,USD,Zara,Groceries,Singapore,2026-08-17T02:19:00Z
-acct-1005,48.42,USD,Starbucks,Groceries,Toronto,2026-08-17T02:32:00Z
-acct-1001,28.44,USD,Delta Airlines,Retail,London,2026-08-17T03:19:00Z
-acct-1002,119.75,USD,Delta Airlines,Travel,Boston,2026-08-17T03:20:00Z
-acct-1003,11.53,USD,Zara,Travel,Berlin,2026-08-17T03:35:00Z
-acct-1005,59.46,USD,Tesco,Transport,Toronto,2026-08-17T04:16:00Z
-acct-1004,200.80,USD,Airbnb,Groceries,Singapore,2026-08-17T04:25:00Z
-acct-1002,103.83,USD,Airbnb,Groceries,New York,2026-08-17T05:28:00Z
-acct-1004,325.39,USD,Amazon,Subscription,Singapore,2026-08-17T06:33:00Z
-acct-1003,25.65,USD,Delta Airlines,Retail,Berlin,2026-08-17T06:35:00Z
-acct-1001,53.34,USD,Best Buy,Groceries,London,2026-08-17T06:38:00Z
-acct-1002,87.95,USD,Tesco,Dining,Boston,2026-08-17T06:55:00Z
-acct-1005,63.16,USD,Steam,Transport,Toronto,2026-08-17T06:57:00Z
-acct-1003,17.77,USD,Uber,Subscription,Berlin,2026-08-17T07:13:00Z
-acct-1005,80.94,USD,Uber,Transport,Toronto,2026-08-17T07:19:00Z
-acct-1005,52.50,USD,Steam,Electronics,Toronto,2026-08-17T09:00:00Z
-acct-1003,27.83,USD,Apple,Entertainment,Berlin,2026-08-17T09:29:00Z
-acct-1005,70.19,USD,Zara,Retail,Toronto,2026-08-17T09:32:00Z
-acct-1002,99.85,USD,Amazon,Retail,New York,2026-08-17T10:02:00Z
-acct-1005,59.66,USD,Delta Airlines,Subscription,Toronto,2026-08-17T10:10:00Z
-acct-1004,343.79,USD,Uber,Subscription,Singapore,2026-08-17T10:11:00Z
-acct-1001,36.75,USD,Airbnb,Entertainment,Manchester,2026-08-17T10:35:00Z
-acct-1005,46.08,USD,Uber,Subscription,Toronto,2026-08-17T11:05:00Z
-acct-1003,14.75,USD,Uber,Dining,Berlin,2026-08-17T11:08:00Z
-acct-1002,170.51,USD,Steam,Groceries,Boston,2026-08-17T11:19:00Z
-acct-1003,27.06,USD,Netflix,Groceries,Berlin,2026-08-17T11:53:00Z
-acct-1004,259.29,USD,Steam,Fuel,Hong Kong,2026-08-17T12:01:00Z
-acct-1004,318.94,USD,Tesco,Electronics,Singapore,2026-08-17T12:59:00Z
-acct-1001,49.58,USD,Best Buy,Entertainment,London,2026-08-17T13:25:00Z
-acct-1002,83.67,USD,Zara,Electronics,New York,2026-08-17T13:30:00Z
-acct-1001,58.77,USD,Delta Airlines,Retail,Manchester,2026-08-17T13:40:00Z
-acct-1001,72.80,USD,Starbucks,Retail,Manchester,2026-08-17T14:23:00Z
-acct-1005,85.13,USD,Shell,Fuel,Toronto,2026-08-17T14:38:00Z
-acct-1003,6.78,USD,Starbucks,Dining,Berlin,2026-08-17T15:18:00Z
-acct-1001,31.72,USD,Tesco,Travel,London,2026-08-17T15:39:00Z
-acct-1002,141.66,USD,Starbucks,Fuel,Boston,2026-08-17T15:51:00Z
-acct-1004,271.28,USD,Starbucks,Travel,Singapore,2026-08-17T15:52:00Z
-acct-1005,50.31,USD,Airbnb,Groceries,Toronto,2026-08-17T18:06:00Z
-acct-1003,16.97,USD,Uber,Entertainment,Berlin,2026-08-17T18:42:00Z
-acct-1004,235.72,USD,Delta Airlines,Transport,Hong Kong,2026-08-17T18:50:00Z
-acct-1002,95.79,USD,Apple,Dining,New York,2026-08-17T18:53:00Z
-acct-1001,68.00,USD,Shell,Travel,London,2026-08-17T19:22:00Z
-acct-1005,40.32,USD,Apple,Transport,Toronto,2026-08-17T19:30:00Z
-acct-1002,61.42,USD,Amazon,Entertainment,Boston,2026-08-17T19:53:00Z
-acct-1005,67.35,USD,Netflix,Electronics,Toronto,2026-08-17T20:40:00Z
-acct-1002,133.25,USD,Delta Airlines,Entertainment,New York,2026-08-17T21:11:00Z
-acct-1005,53.75,USD,Best Buy,Transport,Toronto,2026-08-17T21:23:00Z
-acct-1003,19.24,USD,Uber,Dining,Berlin,2026-08-17T21:29:00Z
-acct-1005,89.47,USD,Apple,Retail,Toronto,2026-08-17T21:49:00Z
-acct-1004,408.24,USD,Airbnb,Entertainment,Hong Kong,2026-08-17T21:55:00Z
-acct-1001,55.69,USD,Uber,Entertainment,London,2026-08-17T21:57:00Z
-acct-1005,73.62,USD,Uber,Transport,Toronto,2026-08-17T22:05:00Z
-acct-1004,306.40,USD,Delta Airlines,Subscription,Singapore,2026-08-17T22:50:00Z
-acct-1003,23.60,USD,Uber,Retail,Berlin,2026-08-17T23:16:00Z
-acct-1005,106.26,USD,Amazon,Travel,Toronto,2026-08-17T23:43:00Z
-acct-1002,112.44,USD,Delta Airlines,Entertainment,Boston,2026-08-17T23:49:00Z
-acct-1004,253.35,USD,Delta Airlines,Transport,Hong Kong,2026-08-18T01:35:00Z
-acct-1002,138.33,USD,Zara,Travel,New York,2026-08-18T01:53:00Z
-acct-1001,14.63,USD,Zara,Transport,London,2026-08-18T01:55:00Z
-acct-1003,13.74,USD,Best Buy,Transport,Berlin,2026-08-18T02:32:00Z
-acct-1004,446.20,USD,Delta Airlines,Groceries,Hong Kong,2026-08-18T02:40:00Z
-acct-1005,50.46,USD,Best Buy,Entertainment,Toronto,2026-08-18T03:09:00Z
-acct-1001,20.95,USD,Delta Airlines,Entertainment,Manchester,2026-08-18T03:52:00Z
-acct-1004,258.42,USD,Zara,Transport,Hong Kong,2026-08-18T03:55:00Z
-acct-1002,86.94,USD,Starbucks,Transport,Boston,2026-08-18T04:03:00Z
-acct-1004,338.38,USD,Uber,Retail,Hong Kong,2026-08-18T04:15:00Z
-acct-1003,18.64,USD,Airbnb,Travel,Berlin,2026-08-18T05:45:00Z
-acct-1001,52.75,USD,Amazon,Entertainment,Manchester,2026-08-18T06:02:00Z
-acct-1003,27.28,USD,Delta Airlines,Travel,Berlin,2026-08-18T06:26:00Z
-acct-1004,368.91,USD,Steam,Travel,Singapore,2026-08-18T06:54:00Z
-acct-1005,64.44,USD,Tesco,Electronics,Toronto,2026-08-18T06:57:00Z
-acct-1001,52.37,USD,Amazon,Groceries,London,2026-08-18T07:15:00Z
-acct-1002,125.98,USD,Uber,Travel,New York,2026-08-18T07:34:00Z
-acct-1002,85.98,USD,Starbucks,Transport,Boston,2026-08-18T08:08:00Z
-acct-1003,12.50,USD,Amazon,Transport,Berlin,2026-08-18T08:08:00Z
-acct-1002,104.14,USD,Shell,Dining,New York,2026-08-18T09:48:00Z
-acct-1001,37.65,USD,Netflix,Groceries,London,2026-08-18T10:31:00Z
-acct-1004,221.91,USD,Starbucks,Subscription,Hong Kong,2026-08-18T10:42:00Z
-acct-1005,58.93,USD,Tesco,Subscription,Toronto,2026-08-18T10:52:00Z
-acct-1002,153.86,USD,Zara,Dining,New York,2026-08-18T11:41:00Z
-acct-1004,245.38,USD,Airbnb,Groceries,Singapore,2026-08-18T11:53:00Z
-acct-1003,5.28,USD,Delta Airlines,Groceries,Berlin,2026-08-18T12:03:00Z
-acct-1002,96.86,USD,Apple,Retail,Boston,2026-08-18T12:12:00Z
-acct-1001,37.06,USD,Uber,Travel,London,2026-08-18T12:57:00Z
-acct-1002,133.71,USD,Apple,Retail,Boston,2026-08-18T13:19:00Z
-acct-1005,38.61,USD,Steam,Electronics,Toronto,2026-08-18T13:34:00Z
-acct-1001,21.68,USD,Starbucks,Travel,Manchester,2026-08-18T14:06:00Z
-acct-1003,22.07,USD,Shell,Fuel,Berlin,2026-08-18T14:45:00Z
-acct-1004,236.76,USD,Uber,Travel,Singapore,2026-08-18T14:48:00Z
-acct-1004,214.51,USD,Uber,Subscription,Singapore,2026-08-18T15:11:00Z
-acct-1005,49.47,USD,Amazon,Subscription,Toronto,2026-08-18T16:50:00Z
-acct-1002,148.75,USD,Amazon,Subscription,Boston,2026-08-18T17:13:00Z
-acct-1001,39.13,USD,Starbucks,Groceries,Manchester,2026-08-18T17:47:00Z
-acct-1005,47.25,USD,Zara,Subscription,Toronto,2026-08-18T17:48:00Z
-acct-1005,51.28,USD,Steam,Electronics,Toronto,2026-08-18T18:25:00Z
-acct-1001,37.41,USD,Delta Airlines,Retail,Manchester,2026-08-18T18:26:00Z
-acct-1003,13.72,USD,Tesco,Entertainment,Berlin,2026-08-18T18:27:00Z
-acct-1004,253.30,USD,Shell,Dining,Hong Kong,2026-08-18T18:37:00Z
-acct-1002,93.23,USD,Apple,Entertainment,Boston,2026-08-18T18:44:00Z
-acct-1004,327.90,USD,Best Buy,Entertainment,Hong Kong,2026-08-18T19:25:00Z
-acct-1004,180.51,USD,Uber,Travel,Singapore,2026-08-18T20:49:00Z
-acct-1005,63.66,USD,Apple,Transport,Toronto,2026-08-18T20:54:00Z
-acct-1001,33.20,USD,Amazon,Electronics,London,2026-08-18T21:33:00Z
-acct-1003,17.38,USD,Steam,Dining,Berlin,2026-08-18T21:57:00Z
-acct-1002,114.81,USD,Delta Airlines,Dining,New York,2026-08-18T22:10:00Z
-acct-1002,66.44,USD,Delta Airlines,Retail,Boston,2026-08-18T23:34:00Z
-acct-1005,50.40,USD,Tesco,Entertainment,Toronto,2026-08-19T00:19:00Z
-acct-1004,266.06,USD,Delta Airlines,Groceries,Singapore,2026-08-19T00:30:00Z
-acct-1001,29.12,USD,Starbucks,Dining,London,2026-08-19T00:54:00Z
-acct-1004,416.45,USD,Airbnb,Electronics,Singapore,2026-08-19T01:21:00Z
-acct-1003,11.33,USD,Uber,Electronics,Berlin,2026-08-19T01:30:00Z
-acct-1003,18.76,USD,Steam,Groceries,Berlin,2026-08-19T03:03:00Z
-acct-1005,75.23,USD,Best Buy,Entertainment,Toronto,2026-08-19T03:16:00Z
-acct-1001,70.26,USD,Shell,Electronics,Manchester,2026-08-19T03:26:00Z
-acct-1005,75.40,USD,Starbucks,Groceries,Toronto,2026-08-19T04:20:00Z
-acct-1001,42.97,USD,Delta Airlines,Entertainment,London,2026-08-19T04:27:00Z
-acct-1001,56.19,USD,Airbnb,Entertainment,London,2026-08-19T05:07:00Z
-acct-1004,319.26,USD,Amazon,Transport,Hong Kong,2026-08-19T05:12:00Z
-acct-1005,49.67,USD,Starbucks,Fuel,Toronto,2026-08-19T05:12:00Z
-acct-1003,21.44,USD,Shell,Dining,Berlin,2026-08-19T06:33:00Z
-acct-1003,25.32,USD,Shell,Retail,Berlin,2026-08-19T07:32:00Z
-acct-1004,246.08,USD,Delta Airlines,Subscription,Singapore,2026-08-19T07:44:00Z
-acct-1001,51.61,USD,Shell,Electronics,London,2026-08-19T08:56:00Z
-acct-1003,9.78,USD,Amazon,Dining,Berlin,2026-08-19T09:31:00Z
-acct-1004,299.71,USD,Airbnb,Subscription,Hong Kong,2026-08-19T10:51:00Z
-acct-1003,23.29,USD,Zara,Travel,Berlin,2026-08-19T10:59:00Z
-acct-1001,45.61,USD,Starbucks,Electronics,Manchester,2026-08-19T11:15:00Z
-acct-1003,13.04,USD,Apple,Groceries,Berlin,2026-08-19T11:32:00Z
-acct-1004,253.21,USD,Delta Airlines,Retail,Singapore,2026-08-19T11:33:00Z
-acct-1001,45.50,USD,Uber,Travel,Manchester,2026-08-19T11:45:00Z
-acct-1001,45.85,USD,Zara,Entertainment,Manchester,2026-08-19T13:13:00Z
-acct-1003,3.23,USD,Airbnb,Fuel,Berlin,2026-08-19T14:06:00Z
-acct-1004,357.54,USD,Airbnb,Groceries,Singapore,2026-08-19T14:26:00Z
-acct-1003,21.43,USD,Uber,Transport,Berlin,2026-08-19T15:29:00Z
-acct-1001,43.28,USD,Starbucks,Retail,Manchester,2026-08-19T16:17:00Z
-acct-1004,248.78,USD,Zara,Transport,Hong Kong,2026-08-19T17:23:00Z
-acct-1003,17.27,USD,Delta Airlines,Transport,Berlin,2026-08-19T17:36:00Z
-acct-1001,36.47,USD,Zara,Subscription,London,2026-08-19T19:00:00Z
-acct-1001,61.23,USD,Amazon,Entertainment,London,2026-08-19T19:29:00Z
-acct-1001,50.29,USD,Tesco,Groceries,London,2026-08-19T20:04:00Z
-acct-1004,272.39,USD,Uber,Travel,Singapore,2026-08-19T20:24:00Z
-acct-1003,14.78,USD,Delta Airlines,Groceries,Berlin,2026-08-19T20:50:00Z
-acct-1004,317.94,USD,Starbucks,Entertainment,Singapore,2026-08-19T21:08:00Z
-acct-1001,54.86,USD,Steam,Retail,London,2026-08-19T23:11:00Z
-acct-1003,23.67,USD,Apple,Subscription,Berlin,2026-08-19T23:38:00Z
-acct-1001,33.36,USD,Apple,Entertainment,London,2026-08-20T02:04:00Z
-acct-1003,19.99,USD,Airbnb,Transport,Berlin,2026-08-20T02:27:00Z
-acct-1003,23.50,USD,Shell,Travel,Berlin,2026-08-20T05:09:00Z
-acct-1003,9.67,USD,Steam,Electronics,Berlin,2026-08-20T07:36:00Z
-acct-1003,5.49,USD,Tesco,Travel,Berlin,2026-08-20T10:33:00Z
+acct-1004,81.04,USD,Starbucks,Retail,Singapore,2026-08-16T12:25:00Z
+acct-1004,64.74,USD,Amazon,Retail,Singapore,2026-08-16T12:25:05Z
+acct-1004,74.48,USD,Delta Airlines,Retail,Singapore,2026-08-16T12:25:10Z
+acct-1004,111.13,USD,Tesco,Retail,Singapore,2026-08-16T12:25:15Z
+acct-1004,95.54,USD,Airbnb,Retail,Singapore,2026-08-16T12:25:20Z
+acct-1004,107.57,USD,Zara,Retail,Singapore,2026-08-16T12:25:25Z
+acct-1004,119.64,USD,Delta Airlines,Retail,Singapore,2026-08-16T12:25:30Z
+acct-1004,89.97,USD,Shell,Retail,Singapore,2026-08-16T12:25:35Z
